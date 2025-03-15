@@ -5,4 +5,5 @@
 # For more details, please check https://github.com/bazelbuild/bazel/issues/18958
 ###############################################################################
 
-bazel_dep(name = "rules_kotlin", version = "1.9.0")
+bazel_dep(name = "rules_kotlin", version = "1.9.6")
+bazel_dep(name= "rules_android", version="0.6.3")
