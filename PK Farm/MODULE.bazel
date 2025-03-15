@@ -7,3 +7,23 @@
 
 bazel_dep(name = "rules_kotlin", version = "1.9.6")
 bazel_dep(name= "rules_android", version="0.6.3")
+bazel_dep(name= "rules_jvm_external", version="6.7")
+
+maven = use_extension("@rules_jvm_external//extensions:extensions.bzl", "maven")
+
+use_repo(maven, "maven")
+
+maven.install(
+    name = "maven",
+    artifacts = [
+        "androidx:appcompat:appcompat:1.7.0",
+        "androidx:core:core:1.15.0",
+        "androidx:core:core-ktx:1.15.0",
+        "androidx_drawerlayout:drawerlayout:1.1.1",
+        "androidx_fragment_fragment",
+        "androidx_lifecycle_lifecycle_common",
+        "androidx",
+        "androidx_lifecycle_lifecycle_viewmodel",
+        "appcompat"
+    ]
+)
