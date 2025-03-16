@@ -2,8 +2,7 @@
     package="com.example.pkfarm">
 
     <application
-        android:allowBackup="true"
-        android:theme="@style/Theme.Material3">
+        android:allowBackup="true">
         <activity
             android:name=".MainActivity"
             android:exported="true">

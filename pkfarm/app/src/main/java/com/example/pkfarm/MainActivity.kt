@@ -23,7 +23,11 @@ class MainActivity : ComponentActivity() {
         scheduleFertilizationReminder()
 
         setContent {
-            PkFarmApp()
+             MaterialTheme(
+        colorScheme = lightColorScheme(),
+        typography = Typography,
+        content = { PkFarmApp() }
+    )
         }
     }
 
@@ -117,4 +121,16 @@ fun PlantingAdvice(date: LocalDate) {
             style = MaterialTheme.typography.bodyLarge
         )
     }
+}
+
+private fun scheduleFertilizationReminder() {
+    val workRequest = PeriodicWorkRequestBuilder<FertilizationWorker>(
+        14, TimeUnit.DAYS // Runs every 2 weeks
+    ).build()
+
+    WorkManager.getInstance(this).enqueueUniquePeriodicWork(
+        "fertilization_reminder",
+        ExistingPeriodicWorkPolicy.KEEP,
+        workRequest
+    )
 }
