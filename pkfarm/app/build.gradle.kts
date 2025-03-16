@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.example.pkfarm"
         minSdk = 21
-        targetSdk = 28
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
@@ -29,6 +29,14 @@ android {
         release {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+    signingConfigs {
+        create("release") {
+            storeFile = file("release-key.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "your-keystore-password"
+            keyAlias = "my_key"
+            keyPassword = System.getenv("KEY_PASSWORD") ?: "your-key-password"
         }
     }
 }
