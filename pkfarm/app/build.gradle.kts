@@ -15,6 +15,11 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
+    
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
 
     buildTypes {
         debug {
@@ -25,6 +30,10 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+}
+
+kotlin {
+    jvmToolchain(21) // Ensure Kotlin uses JDK 21
 }
 
 dependencies {
