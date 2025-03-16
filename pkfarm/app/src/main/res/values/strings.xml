@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">pkfarm</string>
+    <string name="hello_world">Hello, World!</string>
+    <string name="welcome_message">Welcome to our Android app!</string>
+    <string name="button_text">Click Me</string>
+</resources>
