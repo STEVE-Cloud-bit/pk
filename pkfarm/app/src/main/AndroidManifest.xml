@@ -2,9 +2,8 @@
     package="com.example.pkfarm">
 
     <application
-        android:allowBackup="true">
-        <activity
-            android:name=".MainActivity"
+        android:theme="@style/Theme.PkFarm">
+        <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -12,4 +11,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
