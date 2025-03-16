@@ -7,11 +7,12 @@ plugins {
 android {
     namespace = "com.example.pkfarm"
     compileSdk = 34
+    buildToolsVersion = "28.0.0"
 
     defaultConfig {
         applicationId = "com.example.pkfarm"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 28
         versionCode = 1
         versionName = "1.0"
     }
