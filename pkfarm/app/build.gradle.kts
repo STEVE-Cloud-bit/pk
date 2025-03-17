@@ -16,8 +16,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     buildTypes {
@@ -31,9 +31,6 @@ android {
         compose = true
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.3"
-    }
 }
 
 dependencies {
@@ -49,5 +46,6 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(21) // Ensure Kotlin uses JDK 21
+    jvmToolchain(17) // Ensure Kotlin uses JDK 17
 }
+
